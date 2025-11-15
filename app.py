@@ -93,7 +93,7 @@ def send_email(sender_email, receiver_email, subject, body):
 
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()  # Secure the connection
+        server.starttls() 
         server.login(sender_email, os.getenv("EMAIL_PASSWORD"))
         server.send_message(msg)
         print("Email sent successfully!")
